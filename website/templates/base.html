@@ -14,8 +14,8 @@
     {% include "navbar.html" %}
     <div container class="container">
       <br />
-
-      {% block content %}{% endblock %}
+      {% if messages %} {% for message in messages %} {{message}} {% endfor %}
+      {% endif %} {% block content %}{% endblock %}
     </div>
 
     <script
